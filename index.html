@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resistor Calculator</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body> 
+
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="Campus Logo">
+        </a>
+
+        <h1> MEDIA PEMBELAJARAN FISIKA DASAR II</h1>
+       
+    </nav>
+
+ <div class="container">
+        <div class="explanation">
+             <h3>What is a Resistor?</h3>
+             <p>A resistor is a two-terminal passive electrical component that provides electrical resistance to current flow. It opposes the flow of electrons, limiting and regulating current in electrical and electronic circuits.</p>
+         <!-- You can add more details or examples here -->
+        </div>
+
+        <div class="additional-section"> 
+            <h3>Additional Information</h3>
+            <img src="kode warna resistor.png">
+                <!-- Add your content for the additional section  -->
+        </div> 
+ </div>
+
+    <div class="calculator">
+        <h2>Resistor Calculator</h2>
+        <div class="form-group">
+            <label for="color1">Color 1:</label>
+            <select id="color1">
+                <option value="hitam">Hitam</option>
+                <option value="coklat">Coklat</option>
+                <option value="merah">Merah</option>
+                <option value="orange">Orange</option>
+                <option value="kuning">Kuning</option>
+                <option value="hijau">Hijau</option>
+                <option value="biru">Biru</option>
+                <option value="ungu">Ungu</option>
+                <option value="abu-abu">Abu-abu</option>
+                <option value="putih">Putih</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="color2">Color 2:</label>
+            <select id="color2">
+                <option value="hitam">Hitam</option>
+                <option value="coklat">Coklat</option>
+                <option value="merah">Merah</option>
+                <option value="orange">Orange</option>
+                <option value="kuning">Kuning</option>
+                <option value="hijau">Hijau</option>
+                <option value="biru">Biru</option>
+                <option value="ungu">Ungu</option>
+                <option value="abu-abu">Abu-abu</option>
+                <option value="putih">Putih</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="multiplier">Multiplier:</label>
+            <select id="multiplier">
+                <option value="hitam">Hitam</option>
+                <option value="coklat">Coklat</option>
+                <option value="merah">Merah</option>
+                <option value="orange">Orange</option>
+                <option value="kuning">Kuning</option>
+                <option value="hijau">Hijau</option>
+                <option value="biru">Biru</option>
+                <option value="ungu">Ungu</option>
+                <option value="abu-abu">Abu-abu</option>
+                <option value="putih">Putih</option>
+                <option value="emas">Emas</option>
+                <option value="perak">Perak</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tolerance">Tolerance:</label>
+            <select id="tolerance">
+                <option value="coklat" title="Toleransi: +/- 1%">Coklat (+/- 1%)</option>
+                <option value="merah" title="Toleransi: +/- 2%">Merah (+/- 2%)</option>
+                <option value="emas" title="Toleransi: +/- 5%">Emas (+/- 5%)</option>
+                <option value="perak" title="Toleransi: +/- 10%">Perak (+/- 10%)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="button" value="Calculate" onclick="calculateResistor()">
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
