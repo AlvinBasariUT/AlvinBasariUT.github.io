@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nilai Akhir</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <section class="calculator">
+        <h1>Kalkulator Nilai Akhir</h1>
+        <label for="jumlahSoal">Jumlah Soal:</label>
+        <select id="jumlahSoal">
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+        </select>
+        <br>
+        <label for="jawabanBenar">Jumlah Jawaban Benar:</label>
+        <input type="number" id="jawabanBenar" placeholder="Masukkan jumlah jawaban benar">
+        <br>
+        <label for="nilaiTugas">Nilai Tugas:</label>
+        <input type="number" id="nilaiTugas" placeholder="Masukkan nilai tugas (0-100)">
+        <br>
+        <button onclick="hitungNilaiAkhir()">Hitung Nilai Akhir</button>
+        <p id="hasilNilaiAkhir"></p>
+    </section>
+
+    <script>
+        function hitungNilaiAkhir() {
+            const jumlahSoal = parseFloat(document.getElementById('jumlahSoal').value);
+            const jawabanBenar = parseFloat(document.getElementById('jawabanBenar').value);
+            const nilaiTugas = parseFloat(document.getElementById('nilaiTugas').value);
+
+            // Hitung nilai ujian
+            const nilaiUjian = (jawabanBenar / jumlahSoal) * 100;
+
+            // Jika nilai ujian kurang dari 30, tampilkan pesan "SELAMAT MENGULANG"
+            if (nilaiUjian < 30) {
+                document.getElementById('hasilNilaiAkhir').textContent = 'SELAMAT MENGULANG';
+            } else {
+                // Kontribusi nilai
+                const kontribusiUjian = 0.7;
+                const kontribusiTugas = 0.3;
+
+                // Hitung nilai akhir
+                let nilaiAkhir;
+
+                if (!isNaN(nilaiTugas) && nilaiTugas > nilaiUjian) {
+                    // Gunakan nilai tugas jika lebih tinggi daripada nilai ujian
+                    nilaiAkhir = (kontribusiTugas * nilaiTugas) + (kontribusiUjian * nilaiUjian);
+                } else {
+                    // Gunakan nilai ujian
+                    nilaiAkhir = nilaiUjian;
+                }
+
+                // Pastikan nilai akhir tidak melebihi 100
+                nilaiAkhir = Math.min(nilaiAkhir, 100);
+
+                document.getElementById('hasilNilaiAkhir').textContent = `Nilai Akhir: ${nilaiAkhir.toFixed(2)}`;
+            }
+        }
+    </script>
+</body>
+</html>
