@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+.disclaimer {
+    color: #fff;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -40,7 +44,7 @@ body {
     margin: 0;
     padding: 10px;
     background-color: #0033cc; /* Background color */
-    color: #fff; /* Text color */
+    color: #fff; /* Changed text color to white */
     border-radius: 10px 10px 0 0;
     position: absolute;
     top: -15px;
@@ -107,7 +111,7 @@ select {
 
 /* Footer styles */
 footer {
-    background-color: #F8F7F3; /* Background color */
+    background-color: #0033cc; /* Background color */
     color: #fff; /* Text color */
     padding: 10px;
     text-align: center;
@@ -117,7 +121,7 @@ footer {
 footer p {
     margin: 0;
     padding: 0;
-    color: #000;
+    color: #fff;
 }
 
 .social-media {
