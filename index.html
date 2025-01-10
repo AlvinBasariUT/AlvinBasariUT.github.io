@@ -1,75 +1,100 @@
-<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Nilai Akhir</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <div class="container">
-        <section class="disclaimer">
-            <p><strong>Haloow, karena kalkulasi ini murni dari persentase UAS + Tugas, sedangkan katanya bobot tiap soal pada UO itu beragam (saya baru tau juga wkwkwk) jadi jangan menjadikan kalkulasi pada web ini untuk acuan yaa! (will delete this web later, sorry and thank you!)</strong></p>
-        </section>
-
-        <section class="Informasi_nilai">
-            <div class="additional-section">
-                <h3>KEBIJAKAN PENILAIAN UNIVERSITAS TERBUKA</h3>
-                <img src="Kategori_Nilai.png" alt="Kategori Nilai">
-            </div>
-        </section>
-
-        <section class="calculator">
-            <h1>Kalkulator Nilai Akhir</h1>
-            <label for="jumlahSoal">Jumlah Soal:</label>
-            <select id="jumlahSoal">
-                <option value="25">25</option>
-                <option value="30">30</option>
-                <option value="35">35</option>
-                <option value="40">40</option>
-                <option value="45">45</option>
-                <option value="50">50</option>
-            </select>
-            <br>
-            <label for="jawabanBenar">Jumlah Jawaban Benar:</label>
-            <input type="number" id="jawabanBenar" placeholder="Masukkan jumlah jawaban benar">
-            <br>
-            <label for="nilaiTugas">Nilai Tugas:</label>
-            <input type="number" id="nilaiTugas" placeholder="Masukkan nilai tugas (0-100)">
-            <br>
-            <label for="tipeTugas">Tipe Tugas:</label>
-            <select id="tipeTugas">
-                <option value="tuton">Tuton</option>
-                <option value="tmk">TMK</option>
-                <option value="tuweb">Tuweb</option>
-            </select>
-            <br>
-            <button onclick="hitungNilaiAkhir()">Hitung Nilai Akhir</button>
-            <p id="hasilNilaiAkhir"></p>
-        </section>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Announcement Web
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <div class="container mx-auto p-4">
+   <div class="flex justify-between items-center mb-4">
+   </div>
+   <div class="space-y-4" id="announcements-en">
+    <div class="bg-white p-4 rounded shadow">
+     <h2 class="text-xl font-bold text-center">
+      Announcement
+     </h2>
+     <p class="text-gray-700">
+      Hello,
+      <br/>
+      <br/>
+      This grade calculation project was primarily created to assist me and fellow students in calculating final grades based on the Universitas Terbuka (UT) catalog, which explains that the final grade is determined by the percentage of UAS and assignments.
+      <br/>
+      <br/>
+      However, I have received feedback from fellow students indicating differences in the weight of each UO question. To be honest, I do not have accurate information regarding UT's grading method other than what is stated in the official catalog and my experience as a student in the Faculty of Law at Universitas Terbuka.
+      <br/>
+      <br/>
+      Therefore, to avoid the spread of incorrect information and misunderstandings, I have decided to deactivate this project.
+      <br/>
+      <br/>
+      Warm regards,
+      <br/>
+      Alvin Basari
+     </p>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Alvin Basari. All rights reserved.</p>
-        <div class="social-media">
-            <a href="https://youtube.com" target="_blank">
-                <img src="logo_youtube.svg" alt="YouTube" />
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="logo_x.svg" alt="X" />
-            </a>
-            <a href="tel:+1234567890">
-                <img src="logo_whats-app.svg" alt="Phone" />
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="logo_instagram.svg" alt="Instagram" />
-            </a>
-        </div>
-    </footer>
-
-    <script src="Script.js"></script>
-</body>
-
+    <div class="bg-white p-4 rounded shadow">
+     <h2 class="text-xl font-bold text-center">
+      Pengumuman
+     </h2>
+     <p class="text-gray-700">
+      Halo,
+      <br/>
+      <br/>
+      Projek hitung nilai ini dibuat murni dengan tujuan utama untuk memudahkan saya dan membantu rekan-rekan mahasiswa dalam menghitung nilai akhir. Perhitungan ini mengacu pada katalog Universitas Terbuka (UT) yang menjelaskan bahwa nilai akhir diperoleh dari persentase UAS dan tugas.
+      <br/>
+      <br/>
+      Namun, saya menerima beberapa masukan dari rekan mahasiswa yang menyampaikan adanya perbedaan bobot nilai pada setiap soal UO. Sejujurnya, saya sendiri tidak memiliki informasi akurat mengenai metode penilaian UT selain yang tercantum dalam katalog resmi dan pengalaman saya sebagai mahasiswa fakultas hukum di Universitas Terbuka.
+      <br/>
+      <br/>
+      Oleh karena itu, demi menghindari penyebaran informasi yang keliru dan mencegah kesalahpahaman, saya memutuskan untuk menonaktifkan projek ini.
+      <br/>
+      <br/>
+      Salam hangat,
+      <br/>
+      Alvin Basari
+     </p>
+    </div>
+   </div>
+   <div class="space-y-4 hidden" id="announcements-id">
+    <div class="bg-white p-4 rounded shadow">
+     <h2 class="text-xl font-bold">
+      Pengumuman 1
+     </h2>
+     <p class="text-gray-700">
+      Ini adalah pengumuman pertama dalam Bahasa Indonesia.
+     </p>
+     <img alt="Gambar placeholder untuk pengumuman pertama dalam Bahasa Indonesia" class="mt-2 rounded" src="https://placehold.co/600x400"/>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+     <h2 class="text-xl font-bold">
+      Pengumuman 2
+     </h2>
+     <p class="text-gray-700">
+      Ini adalah pengumuman kedua dalam Bahasa Indonesia.
+     </p>
+     <img alt="Gambar placeholder untuk pengumuman kedua dalam Bahasa Indonesia" class="mt-2 rounded" src="https://placehold.co/600x400"/>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+     <h2 class="text-xl font-bold">
+      Pengumuman 3
+     </h2>
+     <p class="text-gray-700">
+      Ini adalah pengumuman ketiga dalam Bahasa Indonesia.
+     </p>
+     <img alt="Gambar placeholder untuk pengumuman ketiga dalam Bahasa Indonesia" class="mt-2 rounded" src="https://placehold.co/600x400"/>
+    </div>
+   </div>
+  </div>
+  <script>
+   document.getElementById('btn-id').addEventListener('click', function() {
+            document.getElementById('announcements-en').classList.add('hidden');
+            document.getElementById('announcements-id').classList.remove('hidden');
+        });
+  </script>
+ </body>
 </html>
